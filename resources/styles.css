@@ -10,7 +10,7 @@ body {
 }
 
 #center {
-    max-width: 50rem;
+    max-width: 55rem;
     margin: 9rem auto;
     padding: 1rem;
 }
@@ -55,7 +55,7 @@ main {
     height: 15rem;
     max-width: 25rem;
     min-width: 17rem;
-    border: 2px solid rgba(128, 128, 128, 0.253);
+    /* border: 1px solid rgba(128, 128, 128, 0.253); */
     border-radius: 5px;
     padding: 1.5rem;
     flex-basis: 20rem;
@@ -67,11 +67,48 @@ main {
 #about {
     overflow: scroll;
     line-height: 1.5;
+    /* display: none; */
 }
 
 #skills {
     display: none;
 }
+
+.flex-container {
+    display: flex;
+    padding-top: 1.4rem
+}
+
+#left-side-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5px;
+}
+
+#right-side-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.logo-sphere {
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    display: block;
+}
+
+.arrow {
+    width: 60px;
+    float: right;
+}
+
 
 #portrait {
     content: ''; /*kun for visualiseing*/
@@ -81,8 +118,17 @@ main {
     background-color: grey;
     flex-shrink: 0;
     overflow: hidden;
-    margin: 10px auto; 
+    margin: 10px 0; 
 }
+
+#portrait img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
 
 @media screen and (max-width:700px){
     .card {
@@ -98,6 +144,9 @@ main {
         padding: 0;
         display: block;
         text-align: center;
+    }
+    #portrait {
+    margin: 10px auto; 
     }
     #center {
         margin-top: 30px;
