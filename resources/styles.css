@@ -36,12 +36,16 @@ address {
 }
 
 .small-sphere {
-    content: '';
     background-color: grey;
     width: 40px;
     height: 40px;
     border-radius: 20px;
     margin: 0 4px;
+    padding: 5px;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 main {
