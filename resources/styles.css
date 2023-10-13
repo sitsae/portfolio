@@ -36,7 +36,7 @@ address {
 }
 
 .small-sphere {
-    background-color: grey;
+    background-color: rgb(215, 214, 214);
     width: 40px;
     height: 40px;
     border-radius: 20px;
