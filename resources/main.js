@@ -30,8 +30,35 @@ function unCollapse() {
       element.classList.toggle("small-sphere-transformed");
 
     }
-  }
+  };
   
 //   const changeButton = document.querySelector("#change");
   contactButton.addEventListener("click", unCollapse);
-  
+
+const arrowAbout = document.querySelectorAll('.arrow')[0];
+const arrowSkills = document.querySelectorAll('.arrow')[1];
+const aboutText = document.getElementById('about');
+const skillPage = document.getElementById('skills');
+
+function arrowRotateSkillsShow () {
+  arrowAbout.classList.toggle('arrow-transform');
+  arrowSkills.classList.toggle('arrow-transform');
+
+
+  skillPage.style.display = 'block';
+  aboutText.style.display = 'none';
+//   // arrowSkills.classList.toggle('arrow-transform');
+};
+
+function arrowRotateAboutShow () {
+  arrowAbout.classList.toggle('arrow-transform');
+  arrowSkills.classList.toggle('arrow-transform');
+
+  skillPage.style.display = 'none';
+  aboutText.style.display = 'block';
+  // arrowSkills.classList.toggle('arrow-transform');
+};
+
+arrowAbout.onclick = arrowRotateSkillsShow;
+arrowSkills.onclick = arrowRotateAboutShow;
+

@@ -20,6 +20,7 @@ body {
     margin-right: 50px;
     padding-left: 20px;
 }
+
 h1 {
     letter-spacing: -.06rem;
     padding-bottom: 5px;
@@ -50,28 +51,23 @@ address {
     border-radius: 20px;
     margin: 0 4px;
     padding: 5px;
-
-    
     transition-property: position;
-    transition-timing-function: ease-out;
-    transition-duration: 1s;
-    /* transition: 400ms; */
+    /* transition-duration: 0.1s; */
 }
 
 .email {
     right:156px;
     opacity: 0;
-    transition-delay: 300ms;
+    transition-delay: 400ms;
 }
 .github {
     right: 104px;
     opacity: 0;
-    transition-delay: 100ms;
+    transition-delay: 200ms;
 }
 
 .discord {
     right: 52px;
-    /* transition-duration: 2s; */
     opacity: 0;
 
 }
@@ -81,7 +77,8 @@ address {
     opacity: 100;
     transition-property: position, opacity;
     transition-timing-function: ease-in-out;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
 }
 
 .sphere-icon {
@@ -89,12 +86,6 @@ address {
     right: 1px;
     bottom: 1px;
 }
-
-/* .hidden {
-    
-} */
-
-
 
 main {
     display: flex;
@@ -114,16 +105,18 @@ main {
     flex-grow: 1;
 }
 
-
-
 #about {
     overflow: scroll;
     line-height: 1.5;
+    transition-property: display;
+    transition-delay: 0.5s;
     /* display: none; */
 }
 
 #skills {
     display: none;
+    transition-property: display;
+    transition-delay: 0.5s;
 }
 
 .flex-container {
@@ -161,6 +154,13 @@ main {
     float: right;
 }
 
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow-transform {
+    transform: rotate(180deg);
+}
 
 #portrait {
     content: ''; /*kun for visualiseing*/
@@ -176,10 +176,6 @@ main {
 #portrait img {
     width: 100%;
     height: auto;
-}
-
-
-
 
 
 @media screen and (max-width:700px){
