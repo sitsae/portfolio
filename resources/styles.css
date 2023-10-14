@@ -35,18 +35,66 @@ address {
     margin: 10px auto;
 }
 
+#contact-sphere {
+    z-index: 10;
+}
+
 .small-sphere {
+    display: inline-block;
+    position: relative;
+    /* bottom:44px; */
+    content: '';
     background-color: rgb(215, 214, 214);
     width: 40px;
     height: 40px;
     border-radius: 20px;
     margin: 0 4px;
     padding: 5px;
+
+    
+    transition-property: position;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+    /* transition: 400ms; */
 }
 
-.hidden {
+.email {
+    right:156px;
     opacity: 0;
+    transition-delay: 300ms;
 }
+.github {
+    right: 104px;
+    opacity: 0;
+    transition-delay: 100ms;
+}
+
+.discord {
+    right: 52px;
+    /* transition-duration: 2s; */
+    opacity: 0;
+
+}
+
+.small-sphere-transformed {
+    position: static;
+    opacity: 100;
+    transition-property: position, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+
+.sphere-icon {
+    position: relative;
+    right: 1px;
+    bottom: 1px;
+}
+
+/* .hidden {
+    
+} */
+
+
 
 main {
     display: flex;
