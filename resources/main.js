@@ -1,8 +1,13 @@
 const contactButton = document.getElementById('contact-sphere');
+
+/**  Her er det fare for at man velger feil elementer hvis man legger på "hidden" et annet sted.
+ * Bedre å legge på id på hver av de og selected med getElementById
+*/
 const discordButton = document.getElementsByClassName('hidden')[0];
 const gitHubButton = document.getElementsByClassName('hidden')[1];
 const emailButton = document.getElementsByClassName('hidden')[2];
 
+// Ser at hele filen er litt dårlig formatert. Bruker du Prettier med formatOnSave?
 
 // console.log(emailButton)
 // function unCollapseContactSpherse() {

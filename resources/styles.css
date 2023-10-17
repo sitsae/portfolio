@@ -106,6 +106,9 @@ main {
 }
 
 #about {
+    /* Hvis du heller bruker "overflow: auto", så skjules scrollbaren helt til det blir nødvendig å scrolle
+    Scroll er også litt unødvendig på et så lite vindu?
+    */
     overflow: scroll;
     line-height: 1.5;
     transition-property: display;
