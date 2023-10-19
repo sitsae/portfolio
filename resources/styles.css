@@ -180,19 +180,36 @@ main {
 }
 
 #portrait {
-  content: ""; /*kun for visualiseing*/
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  background-color: grey;
   flex-shrink: 0;
   overflow: hidden;
   margin: 10px 0;
+  position: relative;
+}
+
+h3#project-heading {
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 112px;
+  display: none;
+  transition: 0.5s;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  z-index: 12;
+  pointer-events: none;
 }
 
 #portrait img {
   width: 100%;
   height: auto;
+}
+
+#portrait img:hover {
+  filter: blur(5px);
 }
 
 #four-circles {
@@ -206,7 +223,7 @@ main {
   align-items: center;
   rotate: 45deg;
   position: relative;
-  display: none; /*skal endres ved å trykke på portrait*/
+  display: none; /* skal endres ved å trykke på portrait */
 }
 
 .project-sphere {
@@ -227,7 +244,6 @@ main {
   /* display: none; */
   rotate: -45deg;
 }
-
 #project-one:hover {
   transform: translateX(-1rem) translateY(-1rem) scale(1.2);
 }
@@ -258,6 +274,11 @@ main {
   text-decoration: none;
   color: aliceblue;
   opacity: 0.2;
+}
+
+#project-x:hover {
+  transform: scale(2);
+  color: black;
 }
 
 @media screen and (max-width: 700px) {
