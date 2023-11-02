@@ -1,27 +1,11 @@
 const contactButton = document.getElementById("contact-sphere");
+
+//variablene nedenfor brukes ikke.
 const discordButton = document.getElementsByClassName("hidden")[0];
 const gitHubButton = document.getElementsByClassName("hidden")[1];
 const emailButton = document.getElementsByClassName("hidden")[2];
 
-// console.log(emailButton)
-// function unCollapseContactSpherse() {
-
-//     if (discordButton.style.opacity === '0'){
-//         discordButton.style.opacity = '100';
-//         gitHubButton.style.opacity = '100';
-//         emailButton.style.opacity = '100';
-//     } else {
-//         discordButton.style.opacity = '0';
-//         gitHubButton.style.opacity = '0';
-//         emailButton.style.opacity = '0';
-//     }
-// }
-
-// contactButton.onclick = unCollapseContactSpherse
-// // contactButton.addEventListener('mouseover', unCollapseContactSpherse)
-
-//Koden over endrer opacity uten delay son funksjonen under.
-
+//viser kontaktspheres
 function unCollapse() {
   const elements = document.querySelectorAll(".small-sphere");
 
@@ -30,7 +14,6 @@ function unCollapse() {
   }
 }
 
-//   const changeButton = document.querySelector("#change");
 contactButton.addEventListener("click", unCollapse);
 
 const arrowAbout = document.querySelectorAll(".arrow")[0];
@@ -38,13 +21,13 @@ const arrowSkills = document.querySelectorAll(".arrow")[1];
 const aboutText = document.getElementById("about");
 const skillPage = document.getElementById("skills");
 
+//funksjon for pilanimasjoner og bytte til side om skills
 function arrowRotateSkillsShow() {
   arrowAbout.classList.toggle("arrow-transform");
   arrowSkills.classList.toggle("arrow-transform");
 
   skillPage.style.display = "block";
   aboutText.style.display = "none";
-  //   // arrowSkills.classList.toggle('arrow-transform');
 }
 
 function arrowRotateAboutShow() {
@@ -53,8 +36,39 @@ function arrowRotateAboutShow() {
 
   skillPage.style.display = "none";
   aboutText.style.display = "block";
-  // arrowSkills.classList.toggle('arrow-transform');
 }
 
 arrowAbout.onclick = arrowRotateSkillsShow;
 arrowSkills.onclick = arrowRotateAboutShow;
+
+//funksjon for å bytte portrettet til prosjekter
+const portrait = document.getElementById("portrait");
+const contactSpheres = document.getElementById("four-circles");
+const projectX = document.getElementById("project-x");
+
+function changeToProjects() {
+  portrait.style.display = "none";
+  contactSpheres.style.display = "grid";
+}
+
+function changeToPortrait() {
+  portrait.style.display = "block";
+  contactSpheres.style.display = "none";
+}
+
+portrait.onclick = changeToProjects;
+projectX.onclick = changeToPortrait;
+
+// vis projectstekst over portrettet:
+const projectText = document.getElementById("project-heading");
+
+function showProjectText() {
+  projectText.style.display = "block";
+}
+
+function hideProjectText() {
+  projectText.style.display = "none";
+}
+
+portrait.onmouseenter = showProjectText;
+portrait.onmouseleave = hideProjectText;
