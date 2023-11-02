@@ -300,6 +300,12 @@ h3#project-heading {
   #portrait {
     margin: 10px auto;
   }
+
+  #four-circles {
+    margin: 10px auto;
+    margin-bottom: 50px;
+  }
+
   #center {
     margin-top: 30px;
   }
